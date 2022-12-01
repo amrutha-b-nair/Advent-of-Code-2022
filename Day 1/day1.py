@@ -5,6 +5,7 @@ with open('input.txt') as file:
    
 elf_calories = []
 total_calorie = 0
+
 # most_calories = 0
 
 for calorie in calories:
@@ -16,6 +17,8 @@ for calorie in calories:
         total_calorie = 0
 
 elf_calories.sort(reverse=True)
+
+# print("Part 1:", most_calories)
 
 print("Part 1:", elf_calories[0])
 print("Part 2:", sum(elf_calories[0:3]))
