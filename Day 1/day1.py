@@ -21,4 +21,5 @@ for calorie in calories:
 # print(total_calories)
 total_calories.sort(reverse=True)
 
-print(sum(total_calories[0:3]))
+print("Part 1:", total_calories[0])
+print("Part 2:", sum(total_calories[0:3]))
