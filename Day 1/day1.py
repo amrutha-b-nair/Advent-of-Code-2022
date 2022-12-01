@@ -1,3 +1,4 @@
+
 with open('input.txt') as file:
     calories = file.read().split('\n')
 
