@@ -2,7 +2,7 @@
 with open('input.txt') as file:
     calories = file.read().split('\n')
 
-   
+  
 elf_calories = []
 total_calories = 0
 
