@@ -4,17 +4,17 @@ with open('input.txt') as file:
 
    
 elf_calories = []
-total_calorie = 0
+total_calories = 0
 
 # most_calories = 0
 
 for calorie in calories:
     if calorie != "":
-        total_calorie += int(calorie)
+        total_calories += int(calorie)
     else:
-        elf_calories.append(total_calorie)
+        elf_calories.append(total_calories)
         # most_calories = max(most_calories, tot_calorie)
-        total_calorie = 0
+        total_calories = 0
 
 elf_calories.sort(reverse=True)
 
