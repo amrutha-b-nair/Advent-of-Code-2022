@@ -9,14 +9,13 @@ output = []
 for line in terminal_output:
     output.append(line.split(" "))
 
-
-directory_tree = defaultdict(list)
-i = 0
 length_output = len(output)
 
+directory_tree = defaultdict(list)
 path_folders = []
 
 k = 0
+i = 0
 
 while i < length_output:
     if output[i][1] == 'cd':
