@@ -1,7 +1,5 @@
 
 from collections import defaultdict
-from sympy import symbols
-from sympy.parsing.sympy_parser import parse_expr
 from copy import deepcopy
 
 
@@ -10,10 +8,19 @@ with open('input.txt') as file:
 
 
 def substitution(eqn, list, x, number, test_number):
-    var = symbols(x)
-    eqn_new = (parse_expr(eqn)// number) % test_number
-    return [eqn_new.subs(var, value) for value in list]
 
+    eqn_list = eqn.split(' ')
+    final = []
+    for value in list:
+        substituted_1 = int(eqn_list[0].replace(x, str(value))) 
+        substituted_2 = int(eqn_list[2].replace(x, str(value)))
+        if eqn_list[1] == '*':
+            eqn_2 = substituted_1 * substituted_2
+        elif eqn_list[1] == '+':
+            eqn_2 = substituted_1 + substituted_2
+
+        final.append((eqn_2// number) % test_number)
+    return final
 
 
 monkey_data = defaultdict(list)
